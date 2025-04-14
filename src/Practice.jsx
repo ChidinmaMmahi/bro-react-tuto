@@ -90,7 +90,7 @@ const Practice = () => {
                 {todos.map((todo) => (
                     <li key={todo.id}>
                         <p onClick={() => handleCompleted(todo.id)}>{todo.value}</p>
-                        <button onClick={() => handleRemoveTodo(todo.id)}>Remove</button>
+                        <button onClick={() => handleRemoveTodo(todo.id)}>Delete</button>
                     </li>
                 ))}
             </ul>

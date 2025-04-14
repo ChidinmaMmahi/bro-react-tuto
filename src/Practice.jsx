@@ -73,7 +73,7 @@ const Practice = () => {
 
         <div>
             <button onClick={toggleDisplay}>{isDisplayed ? "Hide" : "Show"} Text</button>
-            {isDisplayed && <p className='p-text'>I Love Jesus</p>}
+            {isDisplayed && <p className='p-text'>I Love My Family</p>}
         </div><br /><br /><br />
 
     {/* // ------------------------------CHANGE TEXT ONCLICK------------------------------// */}

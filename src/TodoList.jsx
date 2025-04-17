@@ -15,6 +15,10 @@ const TodoList = () => {
         }
     } 
 
+    function onEnterAddTask(e) {
+        e.key === 'Enter' && addTask();
+    }
+
     function deleteTask(index) {
         const updatedTasks = tasks.filter((_, i) => i !== index);
         setTasks(updatedTasks);
@@ -49,6 +53,7 @@ const TodoList = () => {
                         placeholder='Enter a Text ...'
                         value={newTask}
                         onChange={handleInputChange}
+                        onKeyDown={onEnterAddTask}
                         className='w-[90%] sm:w-[50%] py-2.5 px-4 rounded shadow-[2px_2px_5px_rgb(207_202_202)] focus:outline-0'
                     />
                     <button 
@@ -61,15 +66,12 @@ const TodoList = () => {
 
                 <ol className='w-full sm:w-[60%] space-y-3'>
                     {tasks.map((task, index) => (
-                        (<li key={index} className='flex justify-between items-center bg-amber-100 shadow-amber-600 w-full p-4 rounded'>
+                        <li 
+                            key={index} 
+                            className='flex justify-between items-center bg-amber-100 shadow-amber-600 w-full p-4 rounded'
+                        >
                             <span className='text-bold'>{task}</span>
                             <div className='space-x-2 flex items-center'>
-                                <button 
-                                    className='bg-amber-700 text-white text-sm py-2 px-4 rounded cursor-pointer' 
-                                    onClick={() => deleteTask(index)}
-                                >
-                                    Delete
-                                </button>
                                 <button 
                                     className='border border-amber-950 px-1.5 py-0.5 text-xl rounded cursor-pointer' 
                                     onClick={() => moveTaskUp(index)}
@@ -82,8 +84,14 @@ const TodoList = () => {
                                 >
                                     👇🏽
                                 </button>
+                                <button 
+                                    className='bg-amber-700 text-white text-sm py-2 px-4 rounded cursor-pointer' 
+                                    onClick={() => deleteTask(index)}
+                                >
+                                    Delete
+                                </button>
                             </div>
-                        </li>)
+                        </li>
                     ))}
                 </ol>
             </div>

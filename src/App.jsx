@@ -9,8 +9,8 @@ function App() {
     <div>
       {/* <MyComponent /> */}
       {/* <Practice /> */}
-      {/* <TodoList /> */}
-      <DigitalClock />
+      <TodoList />
+      {/* <DigitalClock /> */}
     </div>
   )
 }

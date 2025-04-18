@@ -4,3 +4,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 37%;
+  width: 50.5%;
+  background-image: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 10px;
+}

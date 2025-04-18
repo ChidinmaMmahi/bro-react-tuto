@@ -4,15 +4,17 @@ import Practice from "./Practice"
 import TodoList from "./TodoList"
 import DigitalClock from "./DigitalClock"
 import ColorPicker from "./ColorPicker"
+import StopWatch from "./StopWatch"
 
 function App() {
   return (
-    <div>
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
       <TodoList />
       <DigitalClock />
       <ColorPicker />
-      <MyComponent />
-      <Practice />
+      {/* <MyComponent />
+      <Practice /> */}
+      <StopWatch />
     </div>
   )
 }

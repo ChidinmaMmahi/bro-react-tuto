@@ -29,8 +29,8 @@ const DigitalClock = () => {
   }
 
   return (
-    <div className='bg-red-100 h-screen text-white flex justify-center items-center flex-col'>
-       <p className='text-8xl text-shadow-2xs font-bold border border-red-400 p-20'>{formatTime()}</p>
+    <div className='h-screen snap-start bg-red-100 text-white flex justify-center items-center'>
+       <p className='text-8xl text-shadow-2xs font-bold border border-red-400 py-20 w-[40%] text-center'>{formatTime()}</p>
     </div>
   )
 }

@@ -43,8 +43,8 @@ const TodoList = () => {
     }
 
     return (
-       <div className='h-screen md:bg-gray-100  py-32 px-5 sm:px-0  text-gray-900 font-sans'>
-            <div className='bg-white w-full md:w-[80%] lg:w-[60%] xl:w-[50%] md:m-auto flex flex-col items-center justify-center py-18'>
+       <div className='h-screen snap-start md:bg-gray-100 flex justify-center items-center px-5 sm:px-0  text-gray-900 font-sans'>
+            <div className='max-h-[86%] bg-white w-full md:w-[80%] lg:w-[60%] xl:w-[50%] md:m-auto flex flex-col items-center justify-center py-18'>
                 <h1 className='text-4xl font-bold mb-7'>Todo List</h1>
 
                 <div className='w-full flex items-center justify-center mb-5'>
@@ -64,7 +64,7 @@ const TodoList = () => {
                     </button>
                 </div>
 
-                <ol className='w-full sm:w-[60%] space-y-3'>
+                <ol className='w-full sm:w-[60%] space-y-3 overflow-y-scroll'>
                     {tasks.map((task, index) => (
                         <li 
                             key={index} 

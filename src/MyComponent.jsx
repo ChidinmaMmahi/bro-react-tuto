@@ -15,9 +15,6 @@ const MyComponent = () => {
     const [payment, setPayment] = useState("");
     const handlePaymentChange = (e) => setPayment(e.target.value);
 
-    const [color, setColor] = useState("black");
-    const handleColorChange = (e) => setColor(e.target.value);
-
     const [car, setCar] = useState({
         year:2024,
         make:"Ford",
@@ -91,13 +88,6 @@ const MyComponent = () => {
                     <option value="Giftcard">Giftcard</option>
                 </select>
                 <p>Payment: {payment}</p>
-            </div>
-
-            <div className='color-picker-section'>
-                <h1>Color Picker</h1>
-                <div style={{backgroundColor: color}}>Selected Color: {color}</div>
-                <label htmlFor="">Select a color: </label>
-                <input type="color" onChange={handleColorChange}/>
             </div>
 
             <div>

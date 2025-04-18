@@ -3,14 +3,16 @@ import MyComponent from "./MyComponent"
 import Practice from "./Practice"
 import TodoList from "./TodoList"
 import DigitalClock from "./DigitalClock"
+import ColorPicker from "./ColorPicker"
 
 function App() {
   return (
     <div>
-      {/* <MyComponent /> */}
-      {/* <Practice /> */}
       <TodoList />
-      {/* <DigitalClock /> */}
+      <DigitalClock />
+      <ColorPicker />
+      <MyComponent />
+      <Practice />
     </div>
   )
 }
